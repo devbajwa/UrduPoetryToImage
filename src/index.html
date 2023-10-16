@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../node_modules/dom-to-image/dist/dom-to-image.min.js"></script>
+    <title>Poetry</title>
+</head>
+<body>
+    <h1>Poetry</h1>
+    <form id="htmlForm">
+        <label for="htmlCode">Enter HTML Code:</label><br>
+        <textarea id="htmlCode" name="htmlCode" rows="10" cols="50" placeholder="<p>کچھ شعرو شاعری سے اپنا نہیں تعلق<br>
+            اس ڈھب سے کوئ سمجھے بس مدعا یہی ہے</p>"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+<div class="custom-div" id="html-content">
+    <div class="overlay"></div>
+    <div id="preview" class="content">
+    
+        <p>کچھ شعرو شاعری سے اپنا نہیں تعلق<br>
+            اس ڈھب سے کوئ سمجھے بس مدعا یہی ہے</p>
+      </div>
+  </div>
+<button id="convert-button">Convert to Image</button>
+
+
+
+<!-- <script type="module" src="js/app.js"></script> -->
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+    const htmlContent = document.getElementById("html-content");
+    const convertButton = document.getElementById("convert-button");
+    const outputImage = document.getElementById("output-image");
+    convertButton.addEventListener("click", function () {
+    domtoimage.toJpeg(htmlContent, { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+    });
+});
+
+
+// Get references to the form and preview div
+const form = document.getElementById('htmlForm');
+const preview = document.getElementById('preview');
+
+// Add a submit event listener to the form
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the HTML code entered by the user
+    const htmlCode = document.getElementById('htmlCode').value;
+
+    // Set the preview div's innerHTML to display the entered HTML code
+    preview.innerHTML = htmlCode;
+});
+</script>
+</body>
+</html>

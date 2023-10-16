@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "c": "^1.1.1",
+    "dom-to-image": "^2.6.0",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  }
+}

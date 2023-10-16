@@ -1,0 +1,110 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');*/
+
+@font-face{
+    font-family: 'Noto Nastaliq Urdu';
+    src: url('/NotoNastaliqUrdu-Regular.83f15300.ttf') format('truetype');
+}
+
+body{
+    font-family: 'Noto Nastaliq Urdu', sans-serif;
+    /*font-family: 'Jameel', sans-serif;*/
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+/*
+.container{
+  margin: auto;
+  max-width: 786px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+img{
+  max-width: 100%;
+  height: 100%;
+}
+
+.img{
+  position: relative;
+  z-index: -2;
+}
+
+.img-cont{
+  position: relative;
+}
+
+.text{
+  position: absolute;
+  padding: 20px;
+  width: 40%;
+  text-align-last: justify;
+  font-size: 0.9rem;
+  z-index: 1000000 !important;
+  color: white;
+}
+
+.text > p{
+  margin-top: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); 
+  }
+*/
+
+
+/* Style the custom div */
+.custom-div {
+    background-image: url('https://picsum.photos/id/222/1080/1350'); /* Replace with the URL of your background image */
+    background-size: cover; /* Scale the background image to cover the entire div */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    padding: 20px; /* Add padding as needed */
+    color: #ffffff; /* Set text color */
+    text-align: center; /* Center-align text content */
+    font-size: 18px; /* Set the font size for text */
+  font-family: 'Noto Nastaliq Urdu', serif;
+  text-align-last: justify;
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin: auto;
+}
+
+.content{
+  max-width: 80%;
+  margin: auto;
+  z-index: 100 !important;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Adjust opacity as needed */
+  z-index: -1;
+  }
+
+  button{
+    padding: 12px 30px;
+    color: #ccc;
+    background: #333;
+    font-size: 1rem;
+    margin-block: 1rem;
+  }
+  button:hover{
+    background: #000;
+  }
+
+/*# sourceMappingURL=/style.78032849.css.map */

@@ -19,7 +19,7 @@
         <!--<label for="htmlCode">Enter Poetry as HTML Code:</label><br>
         <textarea id="htmlCode" name="htmlCode" rows="10" cols="50" placeholder="<p>کچھ شعرو شاعری سے اپنا نہیں تعلق<br>
             اس ڈھب سے کوئ سمجھے بس مدعا یہی ہے</p>"></textarea><br>-->
-        <button type="submit">Submit</button>
+        <button type="submit">Preview</button>
     </form>
 
 <div class="custom-div" id="html-content">
@@ -30,7 +30,7 @@
             اس ڈھب سے کوئ سمجھے بس مدعا یہی ہے</p>
       </div>
   </div>
-<button id="convert-button">Convert to Image</button>
+<button id="convert-button">Download Image</button>
 
 
 <footer>
@@ -39,7 +39,15 @@
 <!-- <script type="module" src="js/app.js"></script> -->
 <script>
     ClassicEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector( '#editor' ), {
+        language: {
+            // The UI will be English.
+            ui: 'en',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
             .then( newEditor => {
         editor = newEditor;
     } )

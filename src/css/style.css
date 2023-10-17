@@ -80,7 +80,7 @@ img{
 }
 
 .content{
-  max-width: 100%;
+  max-width: 90%;
   margin: auto;
   z-index: 100 !important;
 }
